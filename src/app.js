@@ -8,6 +8,5 @@ clock.sayTime();
 const date = new Date(consts.localDate);
 date.sayDate();
 
-const clockPlace = document.querySelector("section div");
 
 

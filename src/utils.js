@@ -12,6 +12,10 @@ export function dayOfWeekAsString(day,idx){
 
 /*Function for change checkbox */
 
-export function changeCheckbox(){
-  
+export function changeCheckbox(event){
+  event.target.classList.toggle("checked");
+  event.target.classList.contains("checked") ? event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_checked.ico") : event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_unchecked.ico")
 }
+
+/*Function - show menu element */
+

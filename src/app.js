@@ -8,5 +8,10 @@ clock.sayTime();
 const date = new Date(consts.localDate);
 date.sayDate();
 
+const showTime = document.querySelector(".clock");
+const showDay = document.querySelector(".day");
+const showDate = document.querySelector(".date");
 
-
+showTime.innerText = `${clock.hour}:${clock.minutes}`;
+showDay.innerText = date.day;
+showDate.innerText = `${date.date} ${date.month} ${date.year}`;

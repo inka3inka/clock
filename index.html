@@ -15,15 +15,21 @@
     <div>Navigation</div>
     <div class="menu">
       <label>12/24<input type="checkbox" name="time-12/24"><img alt="checkbox-icone" src="./assets/checkbox_unchecked.ico"></label>
+      <label>Show minutes<input class="checked" type="checkbox" name="time-seconds"><img alt="checkbox-icone" src="./assets/checkbox_checked.ico"></label>
       <label>Show seconds<input type="checkbox" name="time-seconds"><img alt="checkbox-icone" src="./assets/checkbox_unchecked.ico"></label>
       <label>Show milliseconds<input type="checkbox" name="time-milliseconds"><img alt="checkbox-icone" src="./assets/checkbox_unchecked.ico"></label>
-      <label>Show data<input type="checkbox" name="time-data"><img alt="checkbox-icone" src="./assets/checkbox_unchecked.ico"></label>
+      <label>Do not show data<input type="checkbox" name="time-data"><img alt="checkbox-icone" src="./assets/checkbox_unchecked.ico"></label>
     </div>
   </nav>
 
   <section>
     <div>Section</div>
-    <div class="clock">12:00</div>
+    <div class="clock">
+      <span class="hour"></span>
+      <span class="minutes"></span>
+      <span class="seconds"></span>
+      <span class="milliseconds"></span>
+    </div>
     <div class="day">Monday</div>
     <div class="date">30 March 2020</div>
   </section>

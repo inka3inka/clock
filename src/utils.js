@@ -1,7 +1,8 @@
 /* Smart functions */
 
 /*Function converter month to string */
-export function monthAsString(month,idx){
+
+export function monthAsString(month, idx){
   return month[idx];
 }
 
@@ -14,8 +15,13 @@ export function dayOfWeekAsString(day,idx){
 
 export function changeCheckbox(event){
   event.target.classList.toggle("checked");
-  event.target.classList.contains("checked") ? event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_checked.ico") : event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_unchecked.ico")
+  event.target.classList.contains("checked")
+    ? event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_checked.ico")
+    : event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_unchecked.ico")
 }
 
+
 /*Function - show menu element */
+
+
 

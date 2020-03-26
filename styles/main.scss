@@ -15,3 +15,22 @@ section {
 footer {
   background-color: lightskyblue;
 }
+
+//Menu
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}

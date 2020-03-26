@@ -9,3 +9,9 @@ export function monthAsString(month,idx){
 export function dayOfWeekAsString(day,idx){
   return day[idx];
 }
+
+/*Function for change checkbox */
+
+export function changeCheckbox(){
+  
+}

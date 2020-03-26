@@ -15,7 +15,7 @@ const showTime = document.querySelector(".clock");
 const showDay = document.querySelector(".day");
 const showDate = document.querySelector(".date");
 
-/*Set elements innerText */
+/*Set elements' innerText */
 showTime.innerText = `${clock.hour}:${clock.minutes}`;
 showDay.innerText = dayOfWeekAsString(consts.days, date.day);
 showDate.innerText = `${date.date} ${monthAsString(consts.months, date.month)} ${date.year}`;

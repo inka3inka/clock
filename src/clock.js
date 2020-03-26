@@ -1,4 +1,3 @@
-
 export function Clock(date) {
   this.hour = date.getHours();
   this.minutes = date.getMinutes();

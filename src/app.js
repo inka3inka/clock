@@ -7,7 +7,6 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, changeTimeMode} from "
 
   /*Create new Clock and Date object */
 
-  const clock = new Clock(localDate);
   const date = new Data(localDate);
 
   /*Find elements */
@@ -20,11 +19,18 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, changeTimeMode} from "
   const checkboxes = document.querySelectorAll("[type=checkbox]"); /*menu elements */
   const checkboxesArray = [...checkboxes];
 
+  let clock;
+
   /*Basic settings */
+setInterval(function(){
+  clock = new Clock(localDate);
+  console.log(clock);
   showTimeHour.innerText = `${clock.hour}`;
   showTimeMinutes.innerText = `:${clock.minutes}`;
   showTimeSeconds.innerText = `:${clock.seconds}`;
   showTimeMilliseconds.innerText = `:${clock.milliseconds}`;
+}, 1000);
+
   showDay.innerText = dayOfWeekAsString(consts.days, date.day);
   showDate.innerText = `${date.date} ${monthAsString(consts.months, date.month)} ${date.year}`;
 

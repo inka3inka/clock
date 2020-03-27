@@ -1,6 +1,6 @@
-export let localDate;
+export let localDate = new Date();
 
 setInterval(function(){
-  localDate = new Date().getSeconds()
+  localDate = new Date()
 },1000)
 

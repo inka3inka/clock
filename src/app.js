@@ -6,8 +6,8 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, changeTimeMode} from "
 
   /*Create new Clock and Date object */
 
-const clock = new Clock(consts.localDate);
-const date = new Data(consts.localDate);
+  const clock = new Clock(consts.localDate);
+  const date = new Data(consts.localDate);
 
   /*Find elements */
   const showTimeHour = document.querySelector(".hour"); /*clock elements */
@@ -26,6 +26,7 @@ const date = new Data(consts.localDate);
   showTimeMilliseconds.innerText = `:${clock.milliseconds}`;
   showDay.innerText = dayOfWeekAsString(consts.days, date.day);
   showDate.innerText = `${date.date} ${monthAsString(consts.months, date.month)} ${date.year}`;
+
 
   /*Set elements' innerText */
   /*Hours*/

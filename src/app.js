@@ -2,12 +2,13 @@ import '../styles/main.scss';
 import {Clock} from './clock';
 import {Data} from './date';
 import {consts} from './consts';
+import {localDate} from './state';
 import {monthAsString, dayOfWeekAsString, changeCheckbox, changeTimeMode} from "./utils";
 
   /*Create new Clock and Date object */
 
-  const clock = new Clock(consts.localDate);
-  const date = new Data(consts.localDate);
+  const clock = new Clock(localDate);
+  const date = new Data(localDate);
 
   /*Find elements */
   const showTimeHour = document.querySelector(".hour"); /*clock elements */

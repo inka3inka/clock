@@ -1,5 +1,4 @@
 export const consts = {
-  localDate: new Date(),
   months: [
     'January',
     'February',

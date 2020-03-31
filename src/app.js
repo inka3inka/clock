@@ -3,7 +3,7 @@ import {Clock} from './clock';
 import {Data} from './date';
 import {consts} from './consts';
 import {localDate} from './state';
-import {monthAsString, dayOfWeekAsString, changeCheckbox, changeTimeMode} from "./utils";
+import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide} from "./utils";
 
   /*Create new Clock and Date object */
 
@@ -29,41 +29,33 @@ setInterval(function(){
   showTimeMinutes.innerText = `:${clock.minutes}`;
   showTimeSeconds.innerText = `:${clock.seconds}`;
   showTimeMilliseconds.innerText = `:${clock.milliseconds}`;
-}, 1000);
+}, 10);
 
   showDay.innerText = dayOfWeekAsString(consts.days, date.day);
   showDate.innerText = `${date.date} ${monthAsString(consts.months, date.month)} ${date.year}`;
 
+/*Add event to menu elements */
+[...checkboxes].map(elm => elm.addEventListener("click", changeCheckbox));
 
-  /*Set elements' innerText */
   /*Hours*/
   checkboxesArray[0].addEventListener("change", () => {
     checkboxesArray[0].classList.contains("checked") && clock.hour > 12
       ? showTimeHour.innerText = `${clock.hour-12}`
       : showTimeHour.innerText = `${clock.hour}`
   });
+
+/*Show / hide element */
   /*Minutes*/
-  checkboxesArray[1].addEventListener("change", () => {
-    checkboxesArray[1].classList.contains("checked")
-      ? showTimeMinutes.innerText = `:${clock.minutes}`
-      : showTimeMinutes.innerText = ""
-  });
+  showHide(checkboxesArray[1], showTimeMinutes);
+
   /*Seconds*/
-  checkboxesArray[2].addEventListener("change", () => {
-    checkboxesArray[2].classList.contains("checked")
-      ? showTimeSeconds.innerText = `:${clock.seconds}`
-      : showTimeSeconds.innerText = ""
-  });
+  showHide(checkboxesArray[2], showTimeSeconds);
+
   /*Milliseconds*/
-  checkboxesArray[3].addEventListener("change", () => {
-    checkboxesArray[3].classList.contains("checked")
-      ? showTimeMilliseconds.innerText = `:${clock.milliseconds}`
-      : showTimeMilliseconds.innerText = ""
-  });
+  showHide(checkboxesArray[3], showTimeMilliseconds);
 
 
-  /*Add event to menu elements */
-  [...checkboxes].map(elm => elm.addEventListener("click", changeCheckbox));
+
 
 
 

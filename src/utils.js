@@ -20,6 +20,16 @@ export function changeCheckbox(event){
     : event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_unchecked.ico")
 }
 
+/*Function for show/hide element */
+
+export function showHide(arrayElement, element) {
+  arrayElement.addEventListener("change", () => {
+    arrayElement.classList.contains("checked")
+      ? element.style.display = "flex"
+      : element.style.display = "none"
+  });
+}
+
 
 /*Function - show menu element */
 

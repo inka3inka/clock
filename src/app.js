@@ -26,8 +26,8 @@ setInterval(function(){
   clock = new Clock(localDate);
   console.log(clock);
   showTimeHour.innerText = `${clock.hour}`;
-  showTimeMinutes.innerText = `:${clock.minutes}`;
-  showTimeSeconds.innerText = `:${clock.seconds}`;
+  showTimeMinutes.innerText = clock.minutes < 10 ? `:0${clock.minutes}` : `:${clock.minutes}`;
+  showTimeSeconds.innerText = clock.seconds < 10 ? `:0${clock.seconds}` : `:${clock.seconds}`;
   showTimeMilliseconds.innerText = `:${clock.milliseconds}`;
 }, 10);
 

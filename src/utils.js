@@ -20,6 +20,8 @@ export function changeCheckbox(event){
     : event.target.nextElementSibling.setAttribute("src", "./assets/checkbox_unchecked.ico")
 }
 
+
+
 /*Function for show/hide element */
 
 export function showHide(arrayElement, element) {

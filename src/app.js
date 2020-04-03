@@ -27,24 +27,18 @@ setInterval(function(){
   clock = new Clock(localDate);
   console.log(clock);
   showTimeHour24.innerText = `${clock.hour}`;
-  showTimeHour12.innerText = `${clock.hour - 12}`;
+  showTimeHour12.innerText = clock.hour < 21 ? `0${clock.hour - 12}` : `${clock.hour - 12}`;
   showTimeMinutes.innerText = clock.minutes < 10 ? `:0${clock.minutes}` : `:${clock.minutes}`;
   showTimeSeconds.innerText = clock.seconds < 10 ? `:0${clock.seconds}` : `:${clock.seconds}`;
   showTimeMilliseconds.innerText = `:${clock.milliseconds}`;
 }, 10);
 
-  // showDay.innerText = dayOfWeekAsString(consts.days, date.day);
-  // showDate.innerText = `${date.date} ${monthAsString(consts.months, date.month)} ${date.year}`;
+  showDay.innerText = dayOfWeekAsString(consts.days, date.day);
+  showDate.innerText = `${date.date} ${monthAsString(consts.months, date.month)} ${date.year}`;
 
 /*Add event to menu elements */
 [...checkboxes].map(elm => elm.addEventListener("click", changeCheckbox));
 
-  /*Hours*/
-  // checkboxesArray[0].addEventListener("change", () => {
-  //   checkboxesArray[0].classList.contains("checked")
-  //     ? showTimeHour.innerText = `${clock.hour-12}`
-  //     : showTimeHour.innerText = `${clock.hour}`
-  // });
 
 /*Show / hide element */
 

@@ -1,15 +1,15 @@
 @import './_reset.scss';
 
-header {
-  background-color: red;
-}
-
 nav {
-  background-color: darkorange;
+  background-color: lightgrey;
+  color: white;
 }
 
 section {
-  background-color: darkseagreen;
+  background-color: darkgray;
+  color: white;
+  height: 50vh;
+  font-size: 2vw;
 }
 
 footer {
@@ -37,4 +37,25 @@ input {
 
 .hidden {
   display: none;
+}
+
+.navigation {
+  width: 100%;
+  height: 15px;
+  background-color: grey;
+
+  &:hover {
+
+    .navigation-content {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      height: 20vh;
+    }
+  }
+}
+
+.clock {
+  display: flex;
+  flex-direction: row;
 }

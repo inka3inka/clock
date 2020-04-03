@@ -1,5 +1,40 @@
 @import './_reset.scss';
 
-div {
-  background-color: green;
+header {
+  background-color: red;
+}
+
+nav {
+  background-color: darkorange;
+}
+
+section {
+  background-color: darkseagreen;
+}
+
+footer {
+  background-color: lightskyblue;
+}
+
+//Menu
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.hidden {
+  display: none;
 }

@@ -9,7 +9,7 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide} from "./util
 
   const date = new Data(localDate);
 
-  /*Find elements */
+  /*Find elements */ /*View */
   const showTimeHour24 = document.querySelector(".hour-24"); /*clock elements */
   const showTimeHour12 = document.querySelector(".hour-12");
   const showTimeMinutes = document.querySelector(".minutes");
@@ -22,7 +22,7 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide} from "./util
 
   let clock;
 
-  /*Basic settings */
+  /*Basic settings */ /*View */
 setInterval(function(){
   clock = new Clock(localDate);
   console.log(clock);

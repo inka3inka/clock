@@ -9,7 +9,7 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide} from "./util
 
   const date = new Data(localDate);
 
-  /*Find elements */
+  /*Find elements */ /*View */
   const showTimeHour24 = document.querySelector(".hour-24"); /*clock elements */
   const showTimeHour12 = document.querySelector(".hour-12");
   const showTimeMinutes = document.querySelector(".minutes");
@@ -17,17 +17,18 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide} from "./util
   const showTimeMilliseconds = document.querySelector(".milliseconds");
   const showDay = document.querySelector(".day"); /*date elements */
   const showDate = document.querySelector(".date");
+  const menu = document.querySelector(".menu"); /*menu */
   const checkboxes = document.querySelectorAll("[type=checkbox]"); /*menu elements */
   const checkboxesArray = [...checkboxes];
 
   let clock;
 
-  /*Basic settings */
+  /*Basic settings */ /*View */
 setInterval(function(){
   clock = new Clock(localDate);
   console.log(clock);
-  showTimeHour24.innerText = `${clock.hour}`;
-  showTimeHour12.innerText = clock.hour < 21 ? `0${clock.hour - 12}` : `${clock.hour - 12}`;
+  showTimeHour24.innerText = clock.hour < 10 ? `0${clock.hour}` : `${clock.hour}`;
+  showTimeHour12.innerText = clock.hour < 21 ? `0${clock.hour % 12}` : `${clock.hour % 12}`;
   showTimeMinutes.innerText = clock.minutes < 10 ? `:0${clock.minutes}` : `:${clock.minutes}`;
   showTimeSeconds.innerText = clock.seconds < 10 ? `:0${clock.seconds}` : `:${clock.seconds}`;
   showTimeMilliseconds.innerText = `:${clock.milliseconds}`;
@@ -60,6 +61,11 @@ setInterval(function(){
 
   /*Milliseconds*/
   showHide(checkboxesArray[3], showTimeMilliseconds);
+
+  /*Menu*/
+  menu.parentElement.addEventListener("click", () => {
+    menu.classList.toggle("hidden")
+  });
 
 
 

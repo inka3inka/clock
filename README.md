@@ -24,3 +24,5 @@ Project is created with:
 
 ## Setup
 To run this project, install it locally using npm i
+
+<!--    <a href="https://icons8.com/icon/85123/expand-arrow">Expand Arrow icon by Icons8</a>-->

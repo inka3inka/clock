@@ -1,0 +1,11 @@
+@import '_variables.scss';
+@import 'mixins';
+
+html {
+  font-size: 2vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+  display: none;
+}

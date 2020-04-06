@@ -17,6 +17,7 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide} from "./util
   const showTimeMilliseconds = document.querySelector(".milliseconds");
   const showDay = document.querySelector(".day"); /*date elements */
   const showDate = document.querySelector(".date");
+  const menu = document.querySelector(".menu"); /*menu */
   const checkboxes = document.querySelectorAll("[type=checkbox]"); /*menu elements */
   const checkboxesArray = [...checkboxes];
 
@@ -60,6 +61,11 @@ setInterval(function(){
 
   /*Milliseconds*/
   showHide(checkboxesArray[3], showTimeMilliseconds);
+
+  /*Menu*/
+  menu.parentElement.addEventListener("click", () => {
+    menu.classList.toggle("hidden")
+  });
 
 
 

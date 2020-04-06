@@ -1,25 +1,7 @@
 @import '_reset.scss';
 @import '_variables.scss';
-@import '_media-queries.scss';
+@import 'mixins';
 @import '_nav.scss';
 @import '_layout.scss';
 @import '_section.scss';
-
-
-
-section {
-  background-color: black;
-  color: white;
-  height: 50vh;
-  font-size: 2vw;
-}
-
-footer {
-  background-color: lightskyblue;
-}
-
-
-.clock {
-  display: flex;
-  flex-direction: row;
-}
+@import '_footer.scss';

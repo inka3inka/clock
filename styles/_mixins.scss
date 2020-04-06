@@ -11,3 +11,9 @@
     @content
   }
 }
+
+@mixin menu-nav-bar {
+  width: 100%;
+  background-color: darkgray;
+  color: white;
+}

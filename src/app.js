@@ -27,8 +27,8 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide} from "./util
 setInterval(function(){
   clock = new Clock(localDate);
   console.log(clock);
-  showTimeHour24.innerText = `${clock.hour}`;
-  showTimeHour12.innerText = clock.hour < 21 ? `0${clock.hour - 12}` : `${clock.hour - 12}`;
+  showTimeHour24.innerText = clock.hour < 10 ? `0${clock.hour}` : `${clock.hour}`;
+  showTimeHour12.innerText = clock.hour < 21 ? `0${clock.hour % 12}` : `${clock.hour % 12}`;
   showTimeMinutes.innerText = clock.minutes < 10 ? `:0${clock.minutes}` : `:${clock.minutes}`;
   showTimeSeconds.innerText = clock.seconds < 10 ? `:0${clock.seconds}` : `:${clock.seconds}`;
   showTimeMilliseconds.innerText = `:${clock.milliseconds}`;

@@ -18,6 +18,12 @@ section {
     align-items:  flex-end;
   }
 
+  .date-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   .day {
     width: 100%;
     height: 8%;

@@ -32,8 +32,16 @@ export function showHide(arrayElement, element) {
   });
 }
 
+/*Function - change mode */
+export function checkMode(event) {
+  event.target.classList.toggle("checked");
+}
 
-/*Function - show menu element */
-
-
+export function changeMode(arrayElement, element) {
+  arrayElement.addEventListener("click", () => {
+    arrayElement.classList.contains("checked")
+      ? element.style.display = "block"
+      : element.style.display = "none"
+  });
+}
 

@@ -37,11 +37,16 @@ export function checkMode(event) {
   event.target.classList.toggle("checked");
 }
 
-export function changeMode(arrayElement, element) {
-  arrayElement.addEventListener("click", () => {
-    arrayElement.classList.contains("checked")
-      ? element.style.display = "block"
-      : element.style.display = "none"
-  });
+export function changeMode(button, element1, element2) {
+  button.addEventListener("click", () => {
+    if (button.classList.contains("checked")) {
+      element1.style.display = "block";
+      element2.style.display = "none";
+      button.innerText = "Analog clock"
+    } else {
+      element1.style.display = "none";
+      element2.style.display = "block";
+      button.innerText = "Digital clock"
+    }
+  })
 }
-

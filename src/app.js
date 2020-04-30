@@ -21,7 +21,7 @@ import {monthAsString, dayOfWeekAsString, changeCheckbox, showHide, checkMode, c
   const menu = document.querySelector(".menu"); /*menu */
   const checkboxes = document.querySelectorAll("[type=checkbox]"); /*menu elements */
   const checkboxesArray = [...checkboxes];
-  const modeButtons = document.querySelectorAll(".mode");
+  const modeButton = document.querySelector(".mode");
   const digitalClock = document.querySelector(".digital-clock");
   const analogClock = document.querySelector(".analog-clock");
 
@@ -70,12 +70,10 @@ setInterval(function(){
   showHide(checkboxesArray[4], dateContainer);
 
   /*Digital clock */
-  [...modeButtons].map(elm => elm.addEventListener("click", checkMode));
+  modeButton.addEventListener("click", checkMode);
 
-  changeMode(modeButtons[0], digitalClock);
+  changeMode(modeButton, digitalClock, analogClock);
 
-  /*Analog clock */
-  changeMode(modeButtons[1], analogClock);
 
   /*Menu*/
   menu.parentElement.addEventListener("click", () => {

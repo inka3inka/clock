@@ -15,7 +15,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid $night-menu-border-color;
+    border-left: 1px solid $night-menu-border-color;
+    border-right: 1px solid $night-menu-border-color;
     font-size: 1.7rem;
     font-weight: bold;
     text-transform: uppercase;
